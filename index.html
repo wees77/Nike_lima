@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte Oswald -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind config inline para aplicar Oswald -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <title>Nike</title>
+</head>
+
+<body class="h-screen w-screen overflow-hidden font-oswald bg-white relative">
+    <!-- Fundo colorido à direita -->
+    <div class="absolute top-0 right-0 w-1/4 h-full bg-[#E54A4A] -z-10"></div>
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-16 pt-16">
+        <img src="./imgs/logo-nike.png" alt="Logo Nike" class="h-6" />
+        <nav class="flex items-center space-x-4">
+            <span class="text-[41px] font-bold">01</span>
+            <button class="bg-black text-white w-[76px] h-[38px] flex justify-center items-center pt-200">
+                <img src="./imgs/setas.png" alt="Setas">
+            </button>
+        </nav>
+        <img src="./imgs/Burger.png" alt="Menu" class="h-6" />
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex items-center justify-between px-16 pt-20">
+        <!-- Texto -->
+        <div class="max-w-xl">
+            <h2 class="text-[41px] font-bold leading-tight">
+                ------ OUT OF COMPETITION
+            </h2>
+            <p class="text-[21px] mt-4">
+                Stand out with the new Air Zoom G.T. Run, featuring a new cushioning in the heel.
+            </p>
+            <button
+                class="mt-6 bg-black text-white px-6 py-2 tracking-widest text-sm font-bold transition hover:bg-gray-900">
+                PRE - ORDER →
+            </button>
+        </div>
+
+        <!-- Tênis -->
+        <div class="relative">
+            <img src="./imgs/tenis.png" alt="Tênis Nike" class="scale-125 ml-" />
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="absolute bottom-4 left-16 text-xs text-black font-semibold">
+        Copyright 2018 Nike. All rights reserved.
+    </footer>
+</body>
+
+</html>
